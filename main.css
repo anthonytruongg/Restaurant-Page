@@ -1,0 +1,9 @@
+body {
+    background-color: darkseagreen;
+    font-family: 'alata', sans-serif;
+}
+.content {
+    background-color: rgb(186, 164, 164);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
