@@ -1,4 +1,5 @@
-import createContactBody from "./menu";
+import loadPage from "./loadPage";
+import createContactPage from "./contact";
 
 function createHeader() {
     const header = document.createElement('div');
@@ -20,7 +21,6 @@ function createHeader() {
 
     return header;
 }
-
 function createBody() {
     const body = document.createElement('div');
     body.setAttribute('class', 'body');
@@ -37,7 +37,6 @@ function createBody() {
 
     return body
 }
-
 function createFooter() {
     const footer = document.createElement('div');
     footer.setAttribute('class', 'footer');
@@ -51,42 +50,27 @@ function createFooter() {
 
     return footer
 }
-
-function clearPage() {
-    var elem = document.querySelector('.body');
-    elem.parentNode.removeChild(elem);
-    var elemTwo = document.querySelector('.footer');
-    elemTwo.parentNode.removeChild(elemTwo);
-    var elemThree = document.querySelector('.header');
-    elemThree.parentNode.removeChild(elemThree);
-
-    return elemThree
-}
-
-function createWebpage() {
+function createHomePage() {
     const content = document.querySelector('.content');
     content.append(createHeader(), createBody(), createFooter());
-    
+
     const home = document.querySelector('.home');
     home.addEventListener('click', () => {
-    alert("Home");
+        loadPage();
+        createHomePage();
     })
 
     const menu = document.querySelector('.menu');
     menu.addEventListener('click', () => {
-    alert("Menu");
     })
 
     const contact = document.querySelector('.contact');
     contact.addEventListener('click', () => {
-    clearPage();
-    createHeader();
-    createContactBody();
-    createFooter();
+        loadPage();
+        createContactPage();
     })
-
     return content
 }   
 
-export default createWebpage;
+export default createHomePage;
 

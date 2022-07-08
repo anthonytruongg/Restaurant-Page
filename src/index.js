@@ -1,2 +1,4 @@
-import createWebPage from "./homepage";
-createWebPage();
+import createHomePage from "./homepage";
+
+createHomePage();
+
