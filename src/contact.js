@@ -1,5 +1,6 @@
 import loadPage from "./loadPage";
 import createHomePage from "./homepage";
+import createMenuPage from "./menu";
 
 function createHeader() {
     const header = document.createElement('div');
@@ -95,6 +96,8 @@ function createContactPage() {
 
     const menu = document.querySelector('.menu');
     menu.addEventListener('click', () => {
+        loadPage();
+        createMenuPage();
     })
 
     const contact = document.querySelector('.contact');
