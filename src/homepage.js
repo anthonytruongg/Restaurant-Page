@@ -1,4 +1,4 @@
-
+import createContactBody from "./menu";
 
 function createHeader() {
     const header = document.createElement('div');
@@ -41,7 +41,7 @@ function createBody() {
 function createFooter() {
     const footer = document.createElement('div');
     footer.setAttribute('class', 'footer');
-    footer.textContent = 'Copyright © Anthonytruongg';
+    footer.textContent = 'Copyright © anthonytruongg  ';
 
     const github = document.createElement('img');
     github.setAttribute('class', 'github');
@@ -50,6 +50,17 @@ function createFooter() {
     footer.append(github);
 
     return footer
+}
+
+function clearPage() {
+    var elem = document.querySelector('.body');
+    elem.parentNode.removeChild(elem);
+    var elemTwo = document.querySelector('.footer');
+    elemTwo.parentNode.removeChild(elemTwo);
+    var elemThree = document.querySelector('.header');
+    elemThree.parentNode.removeChild(elemThree);
+
+    return elemThree
 }
 
 function createWebpage() {
@@ -68,7 +79,10 @@ function createWebpage() {
 
     const contact = document.querySelector('.contact');
     contact.addEventListener('click', () => {
-    alert("Contact");
+    clearPage();
+    createHeader();
+    createContactBody();
+    createFooter();
     })
 
     return content
