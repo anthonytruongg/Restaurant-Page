@@ -36,7 +36,7 @@ function createContactBody() {
     headingTwo.textContent = 'Head Chef: ';
 
     const pOne = document.createElement('p');
-    pOne.textContent = 'James Rodriguez';
+    pOne.textContent = 'James Dinocchi';
 
     const headingThree = document.createElement('h2');
     headingThree.textContent = 'Contact Number';

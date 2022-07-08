@@ -27,12 +27,15 @@ function createBody() {
 
     const bodyText = document.createElement('div');
     bodyText.setAttribute('class', 'bodyText');
-    bodyText.textContent = "El Pepe's Mexican Fusion Restaurant"
+    bodyText.textContent = "Dinnochi's Fine Dining Fusion Restaurant"
+    const bodyParagraph = document.createElement('p');
+    bodyParagraph.textContent = "3:00pm - 1:00am Daily"
     
     const bodyPhoto = document.createElement('img');
     bodyPhoto.setAttribute('class', 'bodyPhoto');
     bodyPhoto.src = "./images/fancy.jpeg";
 
+    bodyText.append(bodyParagraph)
     body.append(bodyText, bodyPhoto);
 
     return body
