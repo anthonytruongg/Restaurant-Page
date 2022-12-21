@@ -2,5 +2,5 @@
 PROJECT: RESTAURANT PAGE from 'The Odin Project'
 
 
-live preview: 
+## Live Preview 
 https://anthonytruongg.github.io/Restaurant-Page/
